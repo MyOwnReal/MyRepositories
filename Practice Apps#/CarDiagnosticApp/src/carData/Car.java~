@@ -1,0 +1,52 @@
+package carData;
+
+public class Car {
+/*	Ćwiczenie (10 min)
+
+	Rozwiń aplikację z poprzedniego ćwiczenia (diagnostyka sanmochodu) o następujące informacje. 
+	W klasie Car dodaj konstruktor pozwalający zainicjować wszystkie pola klasy oraz dwie metody: 
+		getInfo(), która zwróci opisową formę danego samochodu, a także upgreade(),
+		która zwiększa moc silnika o tyle koni mechanicznych ile przekażemy jako jej parametr.
+		Przetestuj nowe funkcjonalności w klasie CarDiagnostic.*/
+/*//**************************************************************************
+	Ćwiczenie (5 min)
+
+	W programie do diagnostyki samochodu dopisz dodatkowy konstruktor pozwoli zainicjować jedynie markę i model s
+	amochodu, pozostawiając rok produkcji i moc silnika wartościami domyślnymi. 
+	W klasie CarDiagnostic utwórz za pomocą tego konstruktora nowy obiekt i wyświetl informacje o nim na ekranie.*/
+	//***********************************************************************************************************//
+	/*Ćwiczenie (5 min)
+
+	Popraw klasę Car z poprzedniego zadania w taki sposób, aby nazwy argumentów konstruktorów miały bardziej
+	znaczące nazwy (najlepiej takie same jak nazwy pól klasy). Wykorzystaj także słowo kluczowe this 
+	w celu wywołania w jednym z konstruktorów drugiego konstruktora i zaoszczędzić tym samym powtarzalnego kodu.*/
+	
+	String carBrand;
+	String carModel;
+	
+	int year;
+	double horsePower;
+	
+	 public Car(String carBrand, String carModel)
+	{
+		this.carBrand = carBrand;
+		this.carModel = carModel;
+	}
+	
+	public Car(String carBrand, String carModel , int year , int horsePower)
+	{
+		this(carBrand,carModel);
+		this.year = year;
+		this.horsePower = horsePower;
+	}
+
+		public String getCarInfo()
+		{
+			return carBrand+","+carModel+","+year+","+horsePower;
+		}
+
+	 public double upgreade(double u){
+		return u = horsePower+u;
+	}
+
+}
